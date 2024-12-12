@@ -1,0 +1,12 @@
+[flake8]
+inline-quotes = '
+max-line-length = 79
+ignore = ANN002, ANN003, ANN101, D104, ANN204
+exclude =
+    .git
+    __pycache__
+    .pytest_cache
+    .flake8
+    pytest.ini
+    .venv
+    migrations/*

@@ -1,0 +1,21 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Environments
+.env
+.test.env
+.prod.env
+venv
+.venv
+DockerVolumes
+
+# Temp folders
+.pytest_cache
+__pycache__
+htmlcov
+
+# Temp files
+.coverage

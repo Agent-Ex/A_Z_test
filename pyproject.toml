@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "дом-рф"
+version = "0.1.0"
+description = "Тестовое задание для ДОМ.РФ"
+authors = ["Антон <anton.zh.1997@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.6"
+sqlalchemy = "^2.0.36"
+python-dotenv = "^1.0.1"
+alembic = "^1.14.0"
+asyncpg = "^0.30.0"
+uvicorn = "^0.32.1"
+pydantic-settings = "^2.6.1"
+pre-commit = "^4.0.1"
+faststream = {extras = ["cli", "kafka"], version = "^0.5.33"}
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+black = "^24.10.0"
+isort = "^5.13.2"
+
+[tool.poetry.group.test.dependencies]
+pytest-cov = "^6.0.0"
+pytest = "^8.3.4"
+pytest-asyncio = "^0.24.0"
+pyhamcrest = "^2.1.0"
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
