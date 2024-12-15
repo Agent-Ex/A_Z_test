@@ -50,7 +50,7 @@ class Result(Base):
         except gaierror:
             raise exception_500_db_connection
 
-    async def get(self, id_: int) -> dict | None:
+    async def get(self, id_: int) -> float:
         """SQL Alchemy запрос на получение счета по ID записи.
 
         Args:

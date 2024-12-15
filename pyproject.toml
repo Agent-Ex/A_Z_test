@@ -16,6 +16,7 @@ uvicorn = "^0.32.1"
 pydantic-settings = "^2.6.1"
 pre-commit = "^4.0.1"
 faststream = {extras = ["cli", "kafka"], version = "^0.5.33"}
+httpx = "^0.28.1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.1.1"
@@ -27,6 +28,7 @@ pytest-cov = "^6.0.0"
 pytest = "^8.3.4"
 pytest-asyncio = "^0.24.0"
 pyhamcrest = "^2.1.0"
+httpx = "^0.28.1"
 
 [tool.black]
 line-length = 79

@@ -47,16 +47,13 @@ class Base(AbstractDAL):
         return self.__session
 
     async def create(self, *args, **kwargs) -> None:
-        """Create operation for Instance."""
-        # SQL Alchemy create for Instance
+        """Create операция для реализации в наследниках."""
         raise NotImplementedError('This should never happen')
 
     async def get(self, *args, **kwargs) -> None:
-        """Get operation for Instance."""
-        # SQL Alchemy get for Instance
+        """Get операция для реализации в наследниках."""
         raise NotImplementedError('This should never happen')
 
     async def update(self, *args, **kwargs) -> None:
-        """Update operation for Instance."""
-        # SQL Alchemy update for Instance
+        """Update операция для реализации в наследниках."""
         raise NotImplementedError('This should never happen')

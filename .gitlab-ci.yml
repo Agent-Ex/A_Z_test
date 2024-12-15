@@ -1,0 +1,26 @@
+image: docker-images/python:3.12.0  # Укажите путь на образ раннера
+
+variables:
+  SRC_PATH: ./
+
+before_script:
+  - python3 --version
+  - pip --version
+  - poetry --version
+  - poetry install
+
+stages:
+  - lint
+  - test
+
+lint_job:
+  stage: lint
+  script:
+    - flake8 --config .flake8 $SRC_PATH
+    - black --check .
+    - isort --check-only --settings-file ./.isort.cfg $SRC_PATH
+
+unit_test_job:
+  stage: test
+  script:
+    - pytest . -m unittest
